@@ -1,0 +1,34 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="container mt-4">
+  <div class="glass-effect p-4 shadow-lg">
+    <h2 class="mb-4 text-primary fw-bold">
+      📝 Text Summarizer
+    </h2>
+    <form method="POST">
+      <div class="mb-3">
+        <label for="textInput" class="form-label fw-semibold">
+          Paste your text here:
+        </label>
+        <textarea
+          name="text"
+          id="textInput"
+          class="form-control"
+          rows="6"
+          placeholder="Enter text to summarize...">{{ text }}</textarea>
+      </div>
+      <button type="submit" class="btn btn-outline-primary w-100">
+        ✂️ Summarize Text
+      </button>
+    </form>
+
+    {% if summary %}
+    <div class="mt-5 p-3 bg-light border rounded">
+      <h4 class="text-success fw-semibold">🔍 Summary:</h4>
+      <p class="text-dark">{{ summary }}</p>
+    </div>
+    {% endif %}
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="ai-card mx-auto text-center" style="max-width: 650px;">
+    <h1 class="mb-4">👋 Welcome to AI Text Analyzer</h1>
+    <p class="lead mb-3">Choose a tool below to get started:</p>
+    <div class="d-grid gap-3">
+        <a href="/spam" class="btn btn-primary btn-lg">📨 Spam Detection</a>
+        <a href="/sentiment" class="btn btn-success btn-lg">💬 Sentiment Analysis</a>
+        <a href="/summarizer" class="btn btn-info btn-lg">📝 Text Summarization</a>
+    </div>
+</div>
+{% endblock %}

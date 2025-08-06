@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="ai-card mx-auto" style="max-width: 650px;">
+    <h2 class="mb-4 text-primary">📨 Spam Detection</h2>
+    <form method="POST">
+        <div class="mb-3">
+            <label for="email" class="form-label">Enter your message or email text:</label>
+            <textarea name="email" id="email" class="form-control" rows="5" placeholder="Type or paste your message here..." required>{{ email }}</textarea>
+        </div>
+        <button class="btn btn-primary w-100">🚫 Check for Spam</button>
+    </form>
+
+    {% if result %}
+    <hr>
+    <div class="alert alert-warning mt-3 text-center">
+        <strong>🔎 Result:</strong> {{ result }}
+    </div>
+    {% endif %}
+</div>
+{% endblock %}
